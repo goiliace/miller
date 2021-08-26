@@ -47,7 +47,8 @@ bool MillerRabin(u64 n)
 
     for (int a : {2, 325, 9375, 28178, 450775, 9780504, 1795265022})
     //thường thì sẽ dùng 40 base nhưng trên trang https://miller-rabin.appspot.com/
-    //thì có mấy thánh nhân dùng 7 base thôi nên mình copy 7 base đó
+    //thì có mấy thánh nhân ép xuống 7 base thôi.
+    //hiện tại với n<2^64 chỉ cần 7 base là đủ
     {
         if (n == a)
             return true;
